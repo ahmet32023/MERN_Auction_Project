@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-    fullName: { // Güncellenmiş alan adı
+    fullName: { 
         type: String,
         required: true
     },
@@ -27,12 +27,7 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: false // Kayıt olduğunda varsayılan olarak false
     },
-    idPhoto: {
-        type: String,  // Kimlik fotoğrafı için dosya yolu
-        default: ''
-    }
-}, {
-    timestamps: true // Kayıt ve güncellenme zamanını tutar
+    
 });
 
 const User = mongoose.model('User', userSchema);
